@@ -6,4 +6,4 @@
 
 ## Run
 
-    java -cp target/utils-1.0-SNAPSHOT.jar utils.App
+    java -cp target/utils-1.0-SNAPSHOT.jar pcoet.utils.App

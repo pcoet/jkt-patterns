@@ -1,4 +1,4 @@
-package utils;
+package pcoet.utils;
 
 import static org.junit.Assert.assertTrue;
 
