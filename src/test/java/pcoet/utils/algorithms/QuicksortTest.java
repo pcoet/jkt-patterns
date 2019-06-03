@@ -1,19 +1,14 @@
 package pcoet.utils.algorithms;
 
-import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
-public class QuicksortTest 
-{
-    private Quicksort quicksort = new Quicksort();
-
-    @Test
-    public void qucksortReturnsExpectedString() {
-        assertThat(quicksort.sort(), containsString("TODO: Implement quicksort"));
-    }
+public class QuicksortTest {
+  @Test
+  public void qucksortReturnsExpectedString() {
+    int[] input = {12, 9, 3, 7, 14, 11, 6, 2, 10, 5};
+    int[] expected = {2, 3, 5, 6, 7, 9, 10, 11, 12, 14};
+    Quicksort.sort(input);
+    assertArrayEquals(expected, input);
+  }
 }
