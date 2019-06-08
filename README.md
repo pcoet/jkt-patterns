@@ -67,15 +67,15 @@ The other pom.xml would look something like this, but with the correct Main-Clas
 </project>
 ```
 
+During the packaging process, the Shade plugin puts dependencies next to the main class in the jar.
+
 After you package up this other project, you should be able to run it:
 
     java -jar target/<my-jar>.jar
 
 ## TODOs
 
-* Learn about the Java classpath
-* Implement QuickSort
-* Learn about Maven
-  * https://maven.apache.org/index.html
+* Add a linter.
+* Implement (better) QuickSort
 * Learn about JUnit
   * https://github.com/junit-team/junit4/wiki

@@ -1,11 +1,14 @@
 package pcoet.utils.algorithms;
 
+/**
+ * A utility for performing quicksort on an array of integers.
+ */
 public class Quicksort {
   /**
    * Sorts an array of integers in place.
-   * @param arr The array to be sorted
    * Quicksort has an average runtime complexity of O(n log n).
    * For more information, see: https://en.wikipedia.org/wiki/Quicksort
+   * @param arr The array to be sorted
    */
   public static void sort(int[] arr) {
     int l = 0;
@@ -14,6 +17,7 @@ public class Quicksort {
   }
 
   /**
+   * Invokes partition and recurses over left and right halves of array.
    * @param arr The array to be sorted
    * @param l Index of leftmost item
    * @param r Index of rightmost item
