@@ -25,6 +25,11 @@ public class StackTest {
   }
 
   @Test
+  public void stackHasExpectedSize() {
+    assertThat(stack.size(), equalTo(3));
+  }
+
+  @Test
   public void stackCanPopItems() {
     assertThat(stack.pop(), equalTo("bears"));
     assertThat(stack.pop(), equalTo("tigers"));

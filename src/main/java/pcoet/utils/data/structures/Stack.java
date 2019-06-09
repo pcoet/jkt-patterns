@@ -18,6 +18,10 @@ public class Stack<T> {
     return top == null;
   }
 
+  public int size() {
+    return counter;
+  }
+
   /**
    * Pushes an item onto the top of the stack.
    * @param item A generic item
