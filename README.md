@@ -75,7 +75,8 @@ After you package up this other project, you should be able to run it:
 
 ## TODOs
 
-* Add a linter.
+* Convert to Gradle.
+* Use Intellij.
 * Implement (better) QuickSort
 * Learn about JUnit
   * https://github.com/junit-team/junit4/wiki
