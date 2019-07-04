@@ -1,6 +1,6 @@
 package pcoet.utils.algorithms.sort;
 
-public class Selection {
+public class Selection extends Sort {
   /**
    * Sorts an array into increasing order. Runs in O(n2) time.
    * For more information, see https://en.wikipedia.org/wiki/Selection_sort
@@ -19,13 +19,5 @@ public class Selection {
     }
   }
 
-  private static <T extends Comparable<T>> boolean less(T v, T w) {
-    return v.compareTo(w) < 0;
-  }
 
-  private static <T extends Comparable<T>> void exchange(T[] arr, int i, int j) {
-    T t = arr[i];
-    arr[i] = arr[j];
-    arr[j] = t;
-  }
 }
