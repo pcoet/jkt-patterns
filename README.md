@@ -75,6 +75,8 @@ After you package up this other project, you should be able to run it:
 
 ## TODOs
 
-* Implement (better) QuickSort
+* Fix warning in merge sort: "Some input files use unchecked or unsafe operations."
+  * Basically, the generics are raw in this implementation; compare quicksort.
+* Consider using a more readable partition scheme for quicksort.
 * Learn about JUnit
   * https://github.com/junit-team/junit4/wiki
