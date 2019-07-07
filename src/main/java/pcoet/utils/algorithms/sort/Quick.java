@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * A randomized implementation of quicksort.
- * Sorts the input array in place; can be expected to run in O(n log n) time.
+ * Sorts the input array in place, with an average runtime complexity of O(n log n).
  * To learn more, see: https://en.wikipedia.org/wiki/Quicksort
  */
 public class Quick {
@@ -23,39 +23,26 @@ public class Quick {
   }
 
   private static <T extends Comparable<T>> int partition(T[] arr, int lo, int hi) {
-    int i = lo;
-    int j = hi + 1;
-    Comparable<T> v = arr[lo];
-    while (true) {                   // loop forever
-      while (less(arr[++i], v)) {    // scan to the right
-        if (i == hi) {
-          break;
-        }
+    int q = lo;
+    for (int i = lo; i < hi; i++) {
+      if (less(arr[i], arr[hi])) {
+        T tempInner = arr[q];
+        arr[q] = arr[i];
+        arr[i] = tempInner;
+        q++;
       }
-      while (less(v, arr[--j])) {    // scan to the left
-        if (j == lo) {
-          break;
-        }
-      }
-      if (i >= j) {
-        break;
-      }
-      exchange(arr, i, j);
     }
-    exchange(arr, lo, j);
-    return j;
+    T tempOuter = arr[q];
+    arr[q] = arr[hi];
+    arr[hi] = tempOuter;
+
+    return q;
   }
 
   /****************************** Helper functions below. ******************************/
 
   private static boolean less(Comparable v, Comparable w) {
     return v.compareTo(w) < 0;
-  }
-
-  private static void exchange(Object[] arr, int i, int j) {
-    Object temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
   }
 
   /**
