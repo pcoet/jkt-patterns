@@ -1,16 +1,19 @@
 package pcoet.utils.data.structures;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 /**
  * A first in, first out generic collection implemented with a linked list.
  * For more information, see: https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
  */
-public class Queue<T> {
-  private Node first;
-  private Node last;
+public class Queue<T> implements Iterable<T> {
+  private Node<T> first;
+  private Node<T> last;
   private int counter;
 
-  private class Node {
-    T item;
+  private class Node<I> {
+    I item;
     Node next;
   }
 
@@ -27,7 +30,7 @@ public class Queue<T> {
    */
   public void enqueue(T item) {
     Node oldLast = last;
-    last = new Node();
+    last = new Node<>();
     last.item = item;
     last.next = null;
     if (isEmpty()) {
@@ -49,5 +52,33 @@ public class Queue<T> {
       last = null;
     }
     return item;
+  }
+
+  /**
+   * Implements iterator method of Iterable interface.
+   */
+  public Iterator<T> iterator()  {
+    return new ListIterator(first);
+  }
+
+  private class ListIterator implements Iterator<T> {
+    private Node<T> current;
+
+    public ListIterator(Node<T> first) {
+      current = first;
+    }
+
+    public boolean hasNext() {
+      return current != null;
+    }
+
+    public T next() {
+      if (!hasNext()) {
+        throw new NoSuchElementException();
+      }
+      T item = current.item;
+      current = current.next;
+      return item;
+    }
   }
 }
