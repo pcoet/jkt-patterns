@@ -10,13 +10,13 @@ public class Merge {
    * Sorts the array in ascending order, in place.
    * @param arr the array to be sorted
    */
-
+  @SuppressWarnings("unchecked")
   public static void sort(Comparable[] arr) {
     Comparable[] temp = new Comparable[arr.length];
     sort(arr, temp, 0, arr.length - 1);
   }
 
-  private static void sort(Comparable[] arr, Comparable[] temp, int lo, int hi) {
+  private static <T extends Comparable<T>> void sort(T[] arr, T[] temp, int lo, int hi) {
     if (hi <= lo) {
       return;
     }
@@ -26,7 +26,7 @@ public class Merge {
     merge(arr, temp, lo, mid, hi);
   }
 
-  private static void merge(Comparable[] arr, Comparable[] temp, int lo, int mid, int hi) {
+  private static <T extends Comparable<T>> void merge(T[] arr, T[] temp, int lo, int mid, int hi) {
     for (int k = lo; k <= hi; k++) {
       temp[k] = arr[k];                       // copy items from arr into temp
     }
@@ -47,8 +47,7 @@ public class Merge {
     }
   }
 
-  @SuppressWarnings("unchecked")
-  private static boolean less(Comparable v, Comparable w) {
+  private static <T extends Comparable<T>> boolean less(T v, T w) {
     return v.compareTo(w) < 0;
   }
 }
