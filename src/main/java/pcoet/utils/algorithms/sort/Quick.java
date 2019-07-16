@@ -7,6 +7,7 @@ import java.util.Random;
  * Sorts the input array in place, with an average runtime complexity of O(n log n).
  * To learn more, see: https://en.wikipedia.org/wiki/Quicksort
  */
+
 public class Quick {
   public static <T extends Comparable<T>> void sort(T[] arr) {
     shuffle(arr);
@@ -41,7 +42,7 @@ public class Quick {
 
   /****************************** Helper functions below. ******************************/
 
-  private static boolean less(Comparable v, Comparable w) {
+  private static <T extends Comparable<T>> boolean less(T v, T w) {
     return v.compareTo(w) < 0;
   }
 
@@ -50,7 +51,8 @@ public class Quick {
    *
    * @param arr the array to shuffle
    */
-  public static void shuffle(Object[] arr) {
+
+  private static void shuffle(Object[] arr) {
     int arrLength = arr.length;
     for (int i = 0; i < arrLength; i++) {
       long seed = System.currentTimeMillis();

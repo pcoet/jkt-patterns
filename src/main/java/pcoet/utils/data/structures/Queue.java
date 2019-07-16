@@ -21,6 +21,7 @@ public class Queue<T> implements Iterable<T> {
     return first == null;
   }
 
+
   public int size() {
     return counter;
   }
@@ -44,6 +45,7 @@ public class Queue<T> implements Iterable<T> {
   /**
    * Removes and returns an item from the front of the list.
    */
+  @SuppressWarnings("unchecked")
   public T dequeue() {
     final T item = first.item;
     first = first.next;
@@ -61,6 +63,7 @@ public class Queue<T> implements Iterable<T> {
     return new ListIterator(first);
   }
 
+  @SuppressWarnings("unchecked")
   private class ListIterator implements Iterator<T> {
     private Node<T> current;
 

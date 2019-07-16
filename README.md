@@ -75,7 +75,7 @@ After you package up this other project, you should be able to run it:
 
 ## TODOs
 
-* Fix warning in merge sort: "Some input files use unchecked or unsafe operations."
-  * Basically, the generics are raw in this implementation; compare quicksort.
+* Fix suppressed warnings in Merge and Queue: "uses unchecked or unsafe operations."
+  * Basically, the generics are not type safe in these implementations.
 * Learn about JUnit
   * https://github.com/junit-team/junit4/wiki

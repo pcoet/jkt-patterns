@@ -4,11 +4,13 @@ package pcoet.utils.algorithms.sort;
  * An implementation of merge sort, which runs in O(n log n).
  * To learn more, see: https://en.wikipedia.org/wiki/Merge_sort
  */
+
 public class Merge {
   /**
    * Sorts the array in ascending order, in place.
    * @param arr the array to be sorted
    */
+
   public static void sort(Comparable[] arr) {
     Comparable[] temp = new Comparable[arr.length];
     sort(arr, temp, 0, arr.length - 1);
@@ -45,8 +47,8 @@ public class Merge {
     }
   }
 
+  @SuppressWarnings("unchecked")
   private static boolean less(Comparable v, Comparable w) {
     return v.compareTo(w) < 0;
   }
 }
-
