@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class BagTest {
   Bag<String> bag;
-  
+
   private void setUpStack() {
     bag = new Bag<>();
     bag.add("lions");
@@ -22,12 +22,12 @@ public class BagTest {
 
   @Test
   public void bagWithItemsIsNotEmpty() {
-    assertThat(bag.isEmpty(), not(true)); 
+    assertThat(bag.isEmpty(), not(true));
   }
 
   @Test
   public void bagHasExpectedSize() {
-    assertThat(bag.size(), equalTo(3)); 
+    assertThat(bag.size(), equalTo(3));
   }
 
   @Test

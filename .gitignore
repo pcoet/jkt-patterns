@@ -29,5 +29,12 @@ hs_err_pid*
 .vscode
 .idea/
 
+# Ignore gradle files
+.gradle/
+build/
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
 # build
 target

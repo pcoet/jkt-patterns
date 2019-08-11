@@ -4,7 +4,7 @@ public class Selection extends Sort {
   /**
    * Sorts an array into increasing order. Runs in O(n2) time.
    * For more information, see https://en.wikipedia.org/wiki/Selection_sort
-   * @param arr An array 
+   * @param arr An array
    */
   public static <T extends Comparable<T>> void sort(T[] arr) {
     int arrLength = arr.length;
@@ -18,6 +18,5 @@ public class Selection extends Sort {
       exchange(arr, i, min);
     }
   }
-
 
 }

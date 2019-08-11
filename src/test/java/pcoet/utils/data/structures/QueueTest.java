@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class QueueTest {
   Queue<String> queue;
-  
+
   private void setUpStack() {
     queue = new Queue<>();
     queue.enqueue("lions");
@@ -21,12 +21,12 @@ public class QueueTest {
 
   @Test
   public void queueWithItemsIsNotEmpty() {
-    assertThat(queue.isEmpty(), not(true)); 
+    assertThat(queue.isEmpty(), not(true));
   }
 
   @Test
   public void queueHasExpectedSize() {
-    assertThat(queue.size(), equalTo(3)); 
+    assertThat(queue.size(), equalTo(3));
   }
 
   @Test

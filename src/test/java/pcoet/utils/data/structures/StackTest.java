@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class StackTest {
   Stack<String> stack;
-  
+
   private void setUpStack() {
     stack = new Stack<>();
     stack.push("lions");
@@ -21,7 +21,7 @@ public class StackTest {
 
   @Test
   public void stackWithItemsIsNotEmpty() {
-    assertThat(stack.isEmpty(), not(true)); 
+    assertThat(stack.isEmpty(), not(true));
   }
 
   @Test
