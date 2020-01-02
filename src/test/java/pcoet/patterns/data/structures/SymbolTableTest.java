@@ -1,7 +1,8 @@
-package pcoet.utils.data.structures;
+package pcoet.patterns.data.structures;
 
 import org.junit.Before;
 import org.junit.Test;
+
 import java.util.Iterator;
 
 import static org.hamcrest.CoreMatchers.equalTo;

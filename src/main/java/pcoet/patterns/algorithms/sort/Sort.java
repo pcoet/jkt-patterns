@@ -1,4 +1,4 @@
-package pcoet.utils.algorithms.sort;
+package pcoet.patterns.algorithms.sort;
 
 class Sort {
   protected static <T extends Comparable<T>> boolean less(T v, T w) {

@@ -1,4 +1,4 @@
-package pcoet.utils.algorithms.sort;
+package pcoet.patterns.algorithms.sort;
 
 public class Insertion extends Sort {
   /**

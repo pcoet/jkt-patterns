@@ -1,4 +1,4 @@
-package pcoet.utils.data.structures;
+package pcoet.patterns.data.structures;
 
 /**
  * A symbol table that stores unordered key/value pairs.

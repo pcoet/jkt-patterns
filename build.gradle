@@ -3,7 +3,7 @@ plugins {
     id 'checkstyle'
 }
 
-group 'pcoet.utils'
+group 'pcoet.patterns'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8

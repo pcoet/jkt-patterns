@@ -1,4 +1,4 @@
-package pcoet.utils.data.structures;
+package pcoet.patterns.data.structures;
 
 import java.util.Iterator;
 

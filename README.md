@@ -1,4 +1,6 @@
-# Pcoet Utils
+# Pcoet Patterns
+
+Examples of design patterns, algorithms, Java language features, and CS fundamentals.
 
 ## Build
 
@@ -6,7 +8,7 @@
     
 The JAR is built to:
  
- * **build/libs/pcoet-utils-1.0-SNAPSHOT.jar**.
+ * **build/libs/pcoet-patterns-1.0-SNAPSHOT.jar**.
 
 To view test results, open the reports index file in a browser, e.g.:
 
@@ -20,8 +22,12 @@ To view test results, open the reports index file in a browser, e.g.:
 * Learn about Gradle.
 * Fix suppressed warnings in Merge and Queue: "uses unchecked or unsafe operations."
   * Basically, the generics are not type safe in these implementations.
+* Fix CheckStyle warnings: ./build/reports/checkstyle/test.html
 * Learn about JUnit
   * https://github.com/junit-team/junit4/wiki
+* Convert to JUnit5.
+* Build a state machine: https://www.baeldung.com/java-enum-simple-state-machine
+* Implement patterns from Effective Java, 3rd Ed.
   
 ## Things to know
 

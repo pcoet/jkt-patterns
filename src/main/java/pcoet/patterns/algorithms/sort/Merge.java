@@ -1,4 +1,4 @@
-package pcoet.utils.algorithms.sort;
+package pcoet.patterns.algorithms.sort;
 
 /**
  * An implementation of merge sort, which runs in O(n log n).

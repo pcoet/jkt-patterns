@@ -1,4 +1,4 @@
-package pcoet.utils.data.structures;
+package pcoet.patterns.data.structures;
 
 /**
  * A generic stack implemented on a linked list.

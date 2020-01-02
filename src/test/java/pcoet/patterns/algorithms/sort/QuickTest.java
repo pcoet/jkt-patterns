@@ -1,14 +1,14 @@
-package pcoet.utils.algorithms.sort;
+package pcoet.patterns.algorithms.sort;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class MergeTest {
+public class QuickTest {
   @Test
   public void sortsIntegerArray() {
     Integer[] input = {12, 9, 3, 7, 14, 11, 6, 2, 10, 5};
     Integer[] expected = {2, 3, 5, 6, 7, 9, 10, 11, 12, 14};
-    Merge.sort(input);
+    Quick.sort(input);
     assertArrayEquals(expected, input);
   }
 
@@ -31,7 +31,7 @@ public class MergeTest {
         "Sam Eagle"
     };
 
-    Merge.sort(input);
+    Quick.sort(input);
     assertArrayEquals(expected, input);
   }
 }
