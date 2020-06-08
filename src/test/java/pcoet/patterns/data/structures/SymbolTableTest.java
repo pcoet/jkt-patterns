@@ -1,16 +1,19 @@
 package pcoet.patterns.data.structures;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Iterator;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.*;
-
 public class SymbolTableTest {
   SymbolTable<String, String> symbolTable;
 
+  /**
+   * Instantiate a SymbolTable.
+   */
   @Before
   public void setUp() {
     symbolTable = new SymbolTable<>();

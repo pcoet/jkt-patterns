@@ -1,8 +1,9 @@
 package pcoet.patterns.data.structures;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.not;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Test;
 
 public class StackTest {

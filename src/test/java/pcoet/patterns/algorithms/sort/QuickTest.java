@@ -1,6 +1,7 @@
 package pcoet.patterns.algorithms.sort;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
+
 import org.junit.Test;
 
 public class QuickTest {

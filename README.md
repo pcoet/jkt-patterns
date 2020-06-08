@@ -5,6 +5,10 @@ Examples of design patterns, algorithms, Java language features, and CS fundamen
 ## Build
 
     ./gradlew build
+
+Or:
+
+    ./gradlew build --rerun-tasks
     
 The JAR is built to:
  
