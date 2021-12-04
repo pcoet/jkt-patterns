@@ -2,6 +2,10 @@
 
 Examples of design patterns, algorithms, Java language features, and CS fundamentals.
 
+## License
+
+Apache 2.0; see [`LICENSE`](LICENSE) for details.
+
 ## Build
 
     ./gradlew build
