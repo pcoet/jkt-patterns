@@ -1,4 +1,4 @@
-# Pcoet Patterns
+# Java Patterns
 
 Examples of design patterns, algorithms, Java language features, and CS fundamentals.
 
