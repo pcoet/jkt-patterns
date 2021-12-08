@@ -5,6 +5,8 @@ package com.pcoet.patterns.oop.design;
  * Each vertex is a corner of the box (upper left, upper right, lower right, lower left) and is
  * represented by a Point. The edges are not explicitly represented on the class,
  * but are implied by the drag*Edge methods.
+ *
+ * Demonstrates: implementing interfaces, getters, overriding toString.
  */
 public class Widget implements Movable, Resizable {
   private final String name;
