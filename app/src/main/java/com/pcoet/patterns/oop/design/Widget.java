@@ -1,7 +1,7 @@
 package com.pcoet.patterns.oop.design;
 
 /**
- * A mock UI element. A Widget is a movable, resizable box (i.e. rectangle) defined by four vertices and four edges.
+ * A mock UI element. A Widget is a movable, resizable 2D box (i.e. rectangle) defined by four vertices and four edges.
  * Each vertex is a corner of the box (upper left, upper right, lower right, lower left) and is
  * represented by a Point. The edges are not explicitly represented on the class,
  * but are implied by the drag*Edge methods.
@@ -11,18 +11,6 @@ public class Widget implements Movable, Resizable {
   private Point upperLeftPoint;
   private Point upperRightPoint;
   private Point lowerRightPoint;
-
-  @Override
-  public String toString() {
-    return "Widget{" +
-        "name=" + name +
-        ", upperLeftPoint=" + upperLeftPoint +
-        ", upperRightPoint=" + upperRightPoint +
-        ", lowerRightPoint=" + lowerRightPoint +
-        ", lowerLeftPoint=" + lowerLeftPoint +
-        '}';
-  }
-
   private Point lowerLeftPoint;
 
   /**
@@ -110,5 +98,16 @@ public class Widget implements Movable, Resizable {
   public void dragLeftEdge(int x) {
     this.upperLeftPoint = new Point(this.upperLeftPoint.x + x, this.upperLeftPoint.y);
     this.lowerLeftPoint = new Point(this.lowerLeftPoint.x + x, this.lowerLeftPoint.y);
+  }
+
+  @Override
+  public String toString() {
+    return "Widget{" +
+        "name=" + name +
+        ", upperLeftPoint=" + upperLeftPoint +
+        ", upperRightPoint=" + upperRightPoint +
+        ", lowerRightPoint=" + lowerRightPoint +
+        ", lowerLeftPoint=" + lowerLeftPoint +
+        '}';
   }
 }

@@ -1,7 +1,7 @@
 package com.pcoet.patterns.oop.design;
 
 /**
- * A rectangular object (e.g. a UI widget) that can be resized along the x and y axes of a coordinate plane.
+ * A rectangular object (e.g. a UI box) that can be resized along the x and y axes of a coordinate plane.
  */
 public interface Resizable {
   /**
