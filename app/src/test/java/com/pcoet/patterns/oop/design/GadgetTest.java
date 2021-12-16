@@ -9,7 +9,7 @@ public class GadgetTest {
   Gadget gadget;
 
   @Before
-  public void setUp() throws Exception {
+  public void setUp() {
     gadget = new Gadget("TestGadget", 0, 0, 20, 10, "TestButton");
   }
 
@@ -118,7 +118,8 @@ public class GadgetTest {
             "upperLeftPoint=Point{x=0,y=0}, " +
             "upperRightPoint=Point{x=20,y=0}, " +
             "lowerRightPoint=Point{x=20,y=-10}, " +
-            "lowerLeftPoint=Point{x=0,y=-10}}",
+            "lowerLeftPoint=Point{x=0,y=-10}, " +
+            "buttonLabel=TestButton}",
         gadget.toString());
   }
 }

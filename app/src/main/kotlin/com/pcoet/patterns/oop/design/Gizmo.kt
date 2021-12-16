@@ -1,6 +1,6 @@
 package com.pcoet.patterns.oop.design
 
-/*
+/**
  * Gizmo inherits from a Java class, Widget. It adds a field, dialRangeMax,
  * and overrides the toString method.
  */
