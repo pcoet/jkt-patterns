@@ -21,7 +21,7 @@ public class Gadget extends Widget {
   }
 
   /**
-   * Creates a 20 x 20 Widget centered at (0,0).
+   * Creates a 20 x 20 Gadget centered at (0,0).
    * @param name The name of the Gadget
    * @param buttonLabel A descriptive label for the button on the Gadget
    * @return An instance of Gadget
