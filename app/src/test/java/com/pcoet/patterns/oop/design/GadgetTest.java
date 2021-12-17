@@ -122,4 +122,19 @@ public class GadgetTest {
             "buttonLabel=TestButton}",
         gadget.toString());
   }
+
+  @Test
+  public void createAtOrigin() {
+    Gadget gadget = Gadget.createAtOrigin("Some name", "Some button label");
+    assertEquals("Some name", gadget.getName());
+    assertEquals("Some button label", gadget.getButtonLabel());
+    assertEquals(-10, gadget.getUpperLeftPoint().x);
+    assertEquals(10, gadget.getUpperLeftPoint().y);
+    assertEquals(10, gadget.getUpperRightPoint().x);
+    assertEquals(10, gadget.getUpperRightPoint().y);
+    assertEquals(10, gadget.getLowerRightPoint().x);
+    assertEquals(-10, gadget.getLowerRightPoint().y);
+    assertEquals(-10, gadget.getLowerLeftPoint().x);
+    assertEquals(-10, gadget.getLowerLeftPoint().y);
+  }
 }
