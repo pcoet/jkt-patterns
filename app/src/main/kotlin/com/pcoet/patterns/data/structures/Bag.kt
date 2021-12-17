@@ -1,7 +1,7 @@
 package com.pcoet.patterns.data.structures
 
 /**
- * Bag represents a bag (or multiset) of generic items using a singly linked list.
+ * Bag uses a singly linked list to represent a bag (or multiset) of generic items.
  * It supports insertion and iterating over the items in arbitrary order.
  */
 class Bag<Item> : Iterable<Item> {
@@ -35,16 +35,19 @@ class Bag<Item> : Iterable<Item> {
   }
 
   /**
-   * Adds the item to this bag.
+   * Adds the item to this bag. This implementation adds each new item
+   * as a new first element of the underlying linked list.
    *
-   * @param  item the item to add to this bag
+   * @param item the item to add to this bag
+   * @return the bag, to support method chaining
    */
-  fun add(item: Item) {
-    val oldfirst = first
+  fun add(item: Item): Bag<Item> {
+    val oldFirst = first
     first = Node()
-    first!!.item = item
-    first!!.next = oldfirst
+    first?.item = item
+    first?.next = oldFirst
     n++
+    return this
   }
 
   /**
@@ -56,23 +59,19 @@ class Bag<Item> : Iterable<Item> {
     return LinkedIterator(first)
   }
 
-  // an iterator, doesn't implement remove() since it's optional
+  // note: the iterator doesn't support removing items; for that you need a MutableIterator
   private inner class LinkedIterator(private var current: Node<Item>?) :
-    MutableIterator<Item> {
-    override fun hasNext(): Boolean {
-      return current != null
-    }
+    Iterator<Item> {
+      override fun hasNext(): Boolean {
+        return current != null
+      }
 
-    override fun remove() {
-      throw UnsupportedOperationException()
-    }
-
-    override fun next(): Item {
-      if (!hasNext()) throw NoSuchElementException()
-      val item: Item = current!!.item!!
-      current = current!!.next
-      return item
-    }
+      override fun next(): Item {
+        if (!hasNext()) throw NoSuchElementException()
+        val item: Item? = current?.item
+        current = current?.next
+        if (item == null) { throw Exception("Expected next item not to be null") }
+        return item
+      }
   }
 }
-
