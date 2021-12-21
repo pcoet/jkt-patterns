@@ -1,10 +1,9 @@
 # Java Patterns
 
-Examples of design patterns, algorithms, best practices, and Java and Kotlin language features.
+Examples of design patterns, algorithms, data structures, and programming techniques in Java and Kotlin.
 
-## License
-
-Apache 2.0; see [`LICENSE`](LICENSE) for details.
+This repo will eventually contain a Kotlin port of Bob Nystrom's JLox, the teaching language
+from his [Crafting Interpreters](https://craftinginterpreters.com/) project.
 
 ## Build
 
