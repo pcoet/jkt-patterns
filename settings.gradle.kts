@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "jkt-patterns"
-include("app", "functional", "patterns")
+include("algorithms", "app", "functional", "oop")
