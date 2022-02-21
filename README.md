@@ -1,4 +1,4 @@
-# Java Patterns
+# JKt Patterns
 
 Examples of design patterns, algorithms, data structures, and programming techniques in Java and Kotlin.
 
