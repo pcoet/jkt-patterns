@@ -32,8 +32,25 @@ fun <T: Comparable<T>> insertionSort(a: Array<T>) {
   }
 }
 
-private fun <T: Comparable<T>> merge(a: Array<T>, aux: MutableList<T?>, lo: Int, mid: Int, hi: Int) {
+/**
+ * Sorts the input array using mergesort. Translated from:
+ * https://github.com/kevin-wayne/algs4/blob/master/src/main/java/edu/princeton/cs/algs4/Merge.java
+ * @param a the array to be sorted
+ */
+fun <T: Comparable<T>> mergesort(a: Array<T>) {
+  val aux = MutableList<T?>(a.size) { null }
+  mergesort(a, aux, 0, a.size - 1)
+}
 
+private fun <T: Comparable<T>> mergesort(a: Array<T>, aux: MutableList<T?>, lo: Int, hi: Int) {
+  if (hi <= lo) return
+  val mid = lo + (hi - lo) / 2
+  mergesort(a, aux, lo, mid)
+  mergesort(a, aux, mid + 1, hi)
+  merge(a, aux, lo, mid, hi)
+}
+
+private fun <T: Comparable<T>> merge(a: Array<T>, aux: MutableList<T?>, lo: Int, mid: Int, hi: Int) {
   for (k in lo..hi) {
     aux[k] = a[k]
   }
@@ -50,22 +67,44 @@ private fun <T: Comparable<T>> merge(a: Array<T>, aux: MutableList<T?>, lo: Int,
   }
 }
 
-private fun <T: Comparable<T>> mergesort(a: Array<T>, aux: MutableList<T?>, lo: Int, hi: Int) {
-  if (hi <= lo) return
-  val mid = lo + (hi - lo) / 2
-  mergesort(a, aux, lo, mid)
-  mergesort(a, aux, mid + 1, hi)
-  merge(a, aux, lo, mid, hi)
+/**
+ * Sorts the input array using quicksort. Translated from:
+ * https://github.com/kevin-wayne/algs4/blob/master/src/main/java/edu/princeton/cs/algs4/Quick.java
+ * @param a the array to sort
+ */
+fun <T: Comparable<T>> quicksort(a: Array<T>) {
+  a.shuffle()
+  quicksort(a, 0, a.size - 1)
 }
 
-/**
- * Sorts the input array using mergesort. Translated from:
- * https://github.com/kevin-wayne/algs4/blob/master/src/main/java/edu/princeton/cs/algs4/Merge.java
- * @param a the array to be sorted
- */
-fun <T: Comparable<T>> mergesort(a: Array<T>) {
-  val aux = MutableList<T?>(a.size) { null }
-  mergesort(a, aux, 0, a.size - 1)
+private fun <T: Comparable<T>> quicksort(a: Array<T>, lo: Int, hi: Int) {
+  if (hi <= lo) return
+  val j = partition(a, lo, hi)
+  quicksort(a, lo, j - 1)
+  quicksort(a, j + 1, hi)
+}
+
+private fun <T: Comparable<T>> partition(a: Array<T>, lo: Int, hi: Int): Int {
+  var i = lo
+  var j = hi + 1
+  val v = a[lo]
+  while (true) {
+
+    while (a[++i] < v) {
+      if (i == hi) break
+    }
+
+    while (v < a[--j]) {
+      if (j == lo) break
+    }
+
+    if (i >= j) break
+    a.exch(i, j)
+  }
+
+  a.exch(lo, j)
+
+  return j
 }
 
 // an extension function; see https://kotlinlang.org/docs/extensions.html

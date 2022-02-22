@@ -16,9 +16,14 @@ internal class SortTest {
     selectionSort(inputIntArr)
     assertArrayEquals(getExpectedIntArr(), inputIntArr)
 
-    val inputStr = getInputStrArr()
-    selectionSort(inputStr)
-    assertArrayEquals(getExpectedStrArr(), inputStr)
+    val inputStrArr = getInputStrArr()
+    selectionSort(inputStrArr)
+    assertArrayEquals(getExpectedStrArr(), inputStrArr)
+
+    val inputCharArr = arrayOf('s', 'e', 'l', 'e', 'c', 't')
+    val expectedCharArr = arrayOf('c', 'e', 'e', 'l', 's', 't')
+    selectionSort(inputCharArr)
+    assertArrayEquals(expectedCharArr, inputCharArr)
   }
 
   @Test
@@ -30,10 +35,15 @@ internal class SortTest {
     val inputStr = getInputStrArr()
     insertionSort(inputStr)
     assertArrayEquals(getExpectedStrArr(), inputStr)
+
+    val inputCharArr = arrayOf('i', 'n', 's', 'e', 'r', 't')
+    val expectedCharArr = arrayOf('e', 'i', 'n', 'r', 's', 't')
+    insertionSort(inputCharArr)
+    assertArrayEquals(expectedCharArr, inputCharArr)
   }
 
   @Test
-  fun mergeSort() {
+  fun mergesort() {
     val inputIntArr = getInputIntArr()
     mergesort(inputIntArr)
     assertArrayEquals(getExpectedIntArr(), inputIntArr)
@@ -41,5 +51,26 @@ internal class SortTest {
     val inputStr = getInputStrArr()
     mergesort(inputStr)
     assertArrayEquals(getExpectedStrArr(), inputStr)
+
+    val inputCharArr = arrayOf('m', 'e', 'r', 'g', 'e')
+    val expectedCharArr = arrayOf('e', 'e', 'g', 'm', 'r')
+    mergesort(inputCharArr)
+    assertArrayEquals(expectedCharArr, inputCharArr)
+  }
+
+  @Test
+  fun quicksort() {
+    val inputIntArr = getInputIntArr()
+    quicksort(inputIntArr)
+    assertArrayEquals(getExpectedIntArr(), inputIntArr)
+
+    val inputStr = getInputStrArr()
+    quicksort(inputStr)
+    assertArrayEquals(getExpectedStrArr(), inputStr)
+
+    val inputCharArr = arrayOf('q', 'u', 'i', 'c', 'k')
+    val expectedCharArr = arrayOf('c', 'i', 'k', 'q', 'u')
+    quicksort(inputCharArr)
+    assertArrayEquals(expectedCharArr, inputCharArr)
   }
 }
