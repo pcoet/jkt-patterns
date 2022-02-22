@@ -31,4 +31,15 @@ internal class SortTest {
     insertionSort(inputStr)
     assertArrayEquals(getExpectedStrArr(), inputStr)
   }
+
+  @Test
+  fun mergeSort() {
+    val inputIntArr = getInputIntArr()
+    mergesort(inputIntArr)
+    assertArrayEquals(getExpectedIntArr(), inputIntArr)
+
+    val inputStr = getInputStrArr()
+    mergesort(inputStr)
+    assertArrayEquals(getExpectedStrArr(), inputStr)
+  }
 }
