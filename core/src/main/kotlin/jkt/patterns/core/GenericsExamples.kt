@@ -18,7 +18,6 @@ fun <T> buildList(vararg items: T): List<T> {
 // Example of a function that uses the `out` keyword to make a type parameter covariant.
 // `Flock` is covariant in type parameter `Bird`, meaning that you can use a subtype, e.g.
 // `Flock<Goose>`
-
 fun listenToBirds(flock: Flock<out Bird>) {
   for (bird in flock) {
     bird.call()
